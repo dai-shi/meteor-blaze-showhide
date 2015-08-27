@@ -1,0 +1,19 @@
+<template name="showIf">
+  {{#if getCond name}}
+    {{> UI.contentBlock}}
+  {{else}}
+    {{> UI.elseBlock}}
+  {{/if}}
+</template>
+
+<template name="hideIf">
+  {{#unless getCond name}}
+    {{> UI.contentBlock}}
+  {{else}}
+    {{> UI.elseBlock}}
+  {{/unless}}
+</template>
+
+<template name="toggleShowHide">
+  {{> UI.contentBlock}}
+</template>
