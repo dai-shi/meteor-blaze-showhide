@@ -4,6 +4,22 @@ blaze-showhide (Meteor)
 This is a Meteor package to provide
 handy block helpers for show/hide functionality in Blaze.
 
+Templates
+---------
+
+- showIf
+- hideIf
+- showDivIf
+- hideDivIf
+- showSpanIf
+- hideSpanIf
+- toggleShowHide
+- setShowHide
+
+`name` is required for all templates.
+`arg1` is an optional argument for all templates.
+`value` is required for the `setShowHide` template.
+
 Example
 -------
 

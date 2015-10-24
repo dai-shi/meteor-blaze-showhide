@@ -1,5 +1,5 @@
 <template name="showIf">
-  {{#if getCond name}}
+  {{#if getCond name arg1}}
     {{> UI.contentBlock}}
   {{else}}
     {{> UI.elseBlock}}
@@ -7,13 +7,53 @@
 </template>
 
 <template name="hideIf">
-  {{#unless getCond name}}
+  {{#unless getCond name arg1}}
     {{> UI.contentBlock}}
   {{else}}
     {{> UI.elseBlock}}
   {{/unless}}
 </template>
 
+<template name="showDivIf">
+  <div style="display: {{#if getCond name arg1}}block{{else}}none{{/if}}">
+    {{> UI.contentBlock}}
+  </div>
+  <div style="display: {{#unless getCond name arg1}}block{{else}}none{{/unless}}">
+    {{> UI.elseBlock}}
+  </div>
+</template>
+
+<template name="hideDivIf">
+  <div style="display: {{#unless getCond name arg1}}block{{else}}none{{/unless}}">
+    {{> UI.contentBlock}}
+  </div>
+  <div style="display: {{#if getCond name arg1}}block{{else}}none{{/if}}">
+    {{> UI.elseBlock}}
+  </div>
+</template>
+
+<template name="showSpanIf">
+  <span style="display: {{#if getCond name arg1}}inline{{else}}none{{/if}}">
+    {{> UI.contentBlock}}
+  </span>
+  <span style="display: {{#unless getCond name arg1}}inline{{else}}none{{/unless}}">
+    {{> UI.elseBlock}}
+  </span>
+</template>
+
+<template name="hideSpanIf">
+  <span style="display: {{#unless getCond name arg1}}inline{{else}}none{{/unless}}">
+    {{> UI.contentBlock}}
+  </span>
+  <span style="display: {{#if getCond name arg1}}inline{{else}}none{{/if}}">
+    {{> UI.elseBlock}}
+  </span>
+</template>
+
 <template name="toggleShowHide">
+  {{> UI.contentBlock}}
+</template>
+
+<template name="setShowHide">
   {{> UI.contentBlock}}
 </template>
