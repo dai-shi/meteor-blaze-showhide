@@ -31,7 +31,7 @@ Example
     <button>Toggle</button>
   {{/toggleShowHide}}
 </div>
-```````
+```
 
 With [Jade](https://atmospherejs.com/mquandalle/jade):
 
