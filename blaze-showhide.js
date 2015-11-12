@@ -1,10 +1,10 @@
-var prefix = 'showhide-';
+var dict = new ReactiveDict('blaze-showhide');
 var delimiter = '-';
 
 var helpers = {
   getCond: function(name, arg1) {
-    var key = prefix + name + (arg1 ? delimiter + arg1 : '');
-    return Session.get(key);
+    var key = name + (arg1 ? delimiter + arg1 : '');
+    return dict.get(key);
   }
 };
 
@@ -20,8 +20,8 @@ Template.toggleShowHide.events({
     event.preventDefault();
     var name = template.data.name;
     var arg1 = template.data.arg1;
-    var key = prefix + name + (arg1 ? delimiter + arg1 : '');
-    Session.set(key, !Session.get(key));
+    var key = name + (arg1 ? delimiter + arg1 : '');
+    dict.set(key, !dict.get(key));
   }
 });
 
@@ -30,8 +30,8 @@ Template.setShowHide.events({
     event.preventDefault();
     var name = template.data.name;
     var arg1 = template.data.arg1;
-    var key = prefix + name + (arg1 ? delimiter + arg1 : '');
+    var key = name + (arg1 ? delimiter + arg1 : '');
     var value = template.data.value;
-    Session.set(key, value);
+    dict.set(key, value);
   }
 });

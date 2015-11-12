@@ -9,6 +9,7 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.3');
   api.use('templating');
+  api.use('reactive-dict');
   api.addFiles(['blaze-showhide.html', 'blaze-showhide.js'], 'client');
 });
 
