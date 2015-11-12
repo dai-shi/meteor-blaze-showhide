@@ -1,6 +1,6 @@
 Package.describe({
   name: 'daishi:blaze-showhide',
-  version: '0.0.2',
+  version: '0.0.3',
   summary: 'Handy block helpers for show/hide functionality in Blaze',
   git: 'https://github.com/dai-shi/meteor-blaze-showhide',
   documentation: 'README.md'
